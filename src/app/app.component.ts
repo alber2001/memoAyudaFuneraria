@@ -46,6 +46,7 @@ export class AppComponent {
           bold: true,
           alignment: 'center',
           margin: [0, 100, 0, 0],
+          
         },
         destinatario: {
           fontSize: 12,
