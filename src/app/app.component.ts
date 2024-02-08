@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import * as pdfMake from 'pdfmake/build/pdfmake';
-import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+import * as pdfFonts from '../assets/vfs_fonts.js';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
+import { fonts } from './config/pdfFonts';
+import { styles, defaultStyle } from './config/customStyle';
+
+pdfMake.fonts = fonts;
 import { fondo } from './files/fondo';
 
 @Component({
@@ -24,56 +28,58 @@ export class AppComponent {
         },
       ],
       content: [
-        { text: 'MEMO-NO587-2023-RSPS-IHSS', style: 'header' },
-        { text: 'PARA:    	   LIC. EDWIN ORLANDO MEDINA', style: 'destinatario' },
-        { text: '', style: 'espacio' },
-        { text: 'GERENCIA ADMINISTRATIVA Y FINANCIERA', style: 'normal' },
-        { text: '', style: 'espacio' },
-        { text: 'DE:		        ABOG. VICTOR MARTÍNEZ', style: 'remitente' },
-        { text: '', style: 'espacio' },
-        { text: 'GERENTE REGIMEN DEL SEGURO DE PREVISIÓN SOCIAL', style: 'normal' },
-        { text: '', style: 'espacio' },
-        { text: 'ASUNTO: 	REMISIÓN DE ORDEN DE PAGO PARA AYUDA FUNERAL', style: 'remitente' },
-        { text: '', style: 'espacio' },
-        { text: '', style: 'espacio' },
-        { text: '', style: 'espacio' },
-        { text: 'Por medio de la presente remito documentación de Gastos Funerales, para que se emita cheque a favor de YENSI DAYANA NUÑEZ SIERRA con número de identidad 0801-1991-12257 Quien hizo los Gastos de JELBER AICR NUÑES SIERRA (fallecido (a)) por la cantidad de QUINCE MIL SEISCIENTOS CUATRO  LEMPIRAS CON 40/100 (Lps.15,604.40).O/P 587', style: 'principal' },
         
+        { text: 'MEMO-NO587-2023-RSPS-IHSS', style: 'header' },
+        { text: 'PARA     	   LIC. EDWIN ORLANDO MEDINA', style: 'destinatario' },
+        { text: '', style: 'espacio' },
+        { text: ' GERENCIA ADMINISTRATIVA Y FINANCIERA', style: 'gerencia' },
+        // { text: '', style: 'espacio' },
+        // { text: 'DE:		        ABOG. VICTOR MARTÍNEZ', style: 'remitente' },
+        // { text: '', style: 'espacio' },
+        // { text: 'GERENTE REGIMEN DEL SEGURO DE PREVISIÓN SOCIAL', style: 'normal' },
+        // { text: '', style: 'espacio' },
+        // { text: 'ASUNTO: 	REMISIÓN DE ORDEN DE PAGO PARA AYUDA FUNERAL', style: 'remitente' },
+        // { text: '', style: 'espacio' },
+        // { text: '', style: 'espacio' },
+        // { text: '', style: 'espacio' },
+        // { text: 'Por medio de la presente remito documentación de Gastos Funerales, para que se emita cheque a favor de YENSI DAYANA NUÑEZ SIERRA con número de identidad 0801-1991-12257 Quien hizo los Gastos de JELBER AICR NUÑES SIERRA (fallecido (a)) por la cantidad de QUINCE MIL SEISCIENTOS CUATRO  LEMPIRAS CON 40/100 (Lps.15,604.40).O/P 587', style: 'principal' },
       ],
-      styles: {
-        header: {
-          fontSize: 12,
-          bold: true,
-          alignment: 'center',
-          margin: [0, 100, 0, 0],
-          
-        },
-        destinatario: {
-          fontSize: 12,
-          bold: true,
-          alignment: 'left',
-          margin: [45, 40, 0, 0],
-        },
-        normal: {
-          fontSize: 12,
-          bold: false,
-          alignment: 'left',
-          margin: [110, 0, 0, 0],
-        },
-        remitente: {
-          fontSize: 12,
-          bold: true,
-          alignment: 'left',
-          margin: [45, 0, 0, 0],
-        },
-        espacio: {          
-          margin: [0, 0, 0, 10],
-        },
-        principal: {          
-          margin: [0, 0, 0, 10],
-           
-        },
-      },
+      styles, 
+      defaultStyle
+      // styles: {
+      //   header: {
+      //     fontSize: 12,
+      //     bold: true,
+      //     alignment: 'center',
+      //     margin: [0, 100, 0, 0],
+
+      //   },
+      //   destinatario: {
+      //     fontSize: 12,
+      //     bold: true,
+      //     alignment: 'left',
+      //     margin: [45, 40, 0, 0],
+      //   },
+      //   normal: {
+      //     fontSize: 12,
+      //     bold: false,
+      //     alignment: 'left',
+      //     margin: [110, 0, 0, 0],
+      //   },
+      //   remitente: {
+      //     fontSize: 12,
+      //     bold: true,
+      //     alignment: 'left',
+      //     margin: [45, 0, 0, 0],
+      //   },
+      //   espacio: {
+      //     margin: [0, 0, 0, 10],
+      //   },
+      //   principal: {
+      //     margin: [0, 0, 0, 10],
+
+      //   },
+      // },
     };
 
     pdfMake.createPdf(documentDefinition).open();
