@@ -21,8 +21,27 @@ export const styles = {
     fontSize: 12,
     bold: false,
     alignment: 'left',
-    //margin: [110, 0, 0, 0],
+    margin: [72, 0, 0, 0],
   },
+  remitente: {
+    font: 'Arial',
+    fontSize: 12,
+    bold: true,
+    alignment: 'left',    
+  },
+  principal: {
+    font: 'Arial',
+    fontSize: 12,    
+    alignment: 'justify',
+    margin: [-17.8665, 0, 0, 10],
+    lineHeight: 1.5
+  },  
+  negrita:{
+    font: 'Arial',
+    fontSize: 12,
+    bold: true,
+    alignment: 'justify',
+  }
 };
 
 export const defaultStyle = {
