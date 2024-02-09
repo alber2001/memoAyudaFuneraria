@@ -41,7 +41,20 @@ export const styles = {
     fontSize: 12,
     bold: true,
     alignment: 'justify',
+  },
+  normal:{
+    font: 'Arial',
+    fontSize: 12,
+    bold: false,
+    alignment: 'left',
+  },
+  parchivo:{
+    font: 'Arial',
+    fontSize: 8,
+    bold: false,
+    alignment: 'left',
   }
+
 };
 
 export const defaultStyle = {

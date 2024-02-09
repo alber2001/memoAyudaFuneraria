@@ -53,10 +53,20 @@ export class AppComponent {
             { text: ' JELBER AICR NUÑEZ SIERRA (fallecido (a))', style: 'negrita' },
             { text: ' por la cantidad de'},
             { text: ' QUINCE MIL SEISCIENTOS CUATRO LEMPIRAS CON 40/100 (Lps.15,604.40).'},
-            { text: ' O/P 587', style: 'sencillo' }
-        ],
+            { text: ' O/P 587'}
+        ],        
         style: 'principal'
-        }           
+        },
+        { text: '', style: 'espacio' },
+        { text: '', style: 'espacio' },
+        { text: '', style: 'espacio' },                   
+        { text: 'Atentamente', style: 'normal' },
+        { text: '', style: 'espacio' },
+        { text: '', style: 'espacio' },
+        { text: '', style: 'espacio' },
+        { text: '', style: 'espacio' },        
+        { text: '', style: 'espacio' },        
+        { text: 'CC: Archivo', style: 'parchivo' },
       ],
       styles, 
       defaultStyle      
