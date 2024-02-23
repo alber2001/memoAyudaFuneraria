@@ -27,34 +27,40 @@ export const styles = {
     font: 'Arial',
     fontSize: 12,
     bold: true,
-    alignment: 'left',    
+    alignment: 'left',
   },
   principal: {
     font: 'Arial',
-    fontSize: 12,    
+    fontSize: 12,
     alignment: 'justify',
     margin: [-17.8665, 0, 0, 10],
-    lineHeight: 1.5
-  },  
-  negrita:{
+    lineHeight: 1.5,
+  },
+  negrita: {
     font: 'Arial',
     fontSize: 12,
     bold: true,
     alignment: 'justify',
   },
-  normal:{
+  normal: {
     font: 'Arial',
     fontSize: 12,
     bold: false,
     alignment: 'left',
   },
-  parchivo:{
+  parchivo: {
     font: 'Arial',
     fontSize: 8,
     bold: false,
     alignment: 'left',
-  }
-
+  },
+  header2: {
+    font: 'Arial',
+    fontSize: 12,
+    bold: true,
+    alignment: 'center',
+    margin: [0, 40, 0, 0],
+  },
 };
 
 export const defaultStyle = {

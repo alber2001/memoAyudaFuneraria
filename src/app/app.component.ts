@@ -41,14 +41,14 @@ export class AppComponent implements OnInit {
   generatePDF() {
     const documentDefinition = {
       pageMargins: [85.05, 40, 85.05, 40],
-      pageSize: 'A4', // Establecer el tamaño de la página como "carta" letter
+      pageSize: 'letter', // Establecer el tamaño de la página como "carta" letter
       background: [
         {
           image: fondo,
-          // width: 612, tamaño carta
-          // height: 792,
-          width: 595, // Ancho de la hoja A4 en puntos
-          height: 842, // Alto de la hoja A4 en puntos
+          width: 612, //tamaño carta
+          height: 792,
+          //width: 595, // Ancho de la hoja A4 en puntos
+          //height: 842, // Alto de la hoja A4 en puntos
         },
       ],
       content: this.generateContent(),
