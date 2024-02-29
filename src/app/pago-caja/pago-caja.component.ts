@@ -104,7 +104,7 @@ export class PagoCajaComponent implements OnInit {
                     style: 'normal',
                   },
                   {
-                    text: 'Valor que se paga al solicitante: ',
+                    text: 'Valor que se paga al solicitante: \n',
                     style: 'normal',
                   },
                   {
@@ -112,7 +112,7 @@ export class PagoCajaComponent implements OnInit {
                     style: 'normalBoldLeft',
                   },
                   {
-                    text: 'Quien hizo los gastos de: ',
+                    text: 'Quien hizo los gastos de: \n',
                     style: 'normal',
                   },
                   {
@@ -170,7 +170,44 @@ export class PagoCajaComponent implements OnInit {
             ],
           ],
         },
-      }
+      },
+      {
+        text: [
+          {
+            text: 'ES CONFORME:                                                                      PAGUESE:',
+            style: 'normal1',
+          },
+        ],
+        margin: [55, 40, 0, 0],
+      },
+      {
+        canvas: [
+          {
+            type: 'line',
+            x1: 0,
+            y1: 0,
+            x2: 125,
+            y2: 0,
+            lineWidth: 1,
+            lineColor: 'black',
+          },
+        ],
+        margin: [34, 20, 0, 0],
+      },
+      {
+        canvas: [
+          {
+            type: 'line',
+            x1: 0,
+            y1: 0,
+            x2: 127,
+            y2: 0,
+            lineWidth: 1,
+            lineColor: 'black',
+          },
+        ],
+        margin: [290, -1, 0, 0],
+      },
     );
 
     return content;

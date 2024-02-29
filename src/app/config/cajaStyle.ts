@@ -25,6 +25,11 @@ export const styles = {
     alignment: 'left',
     lineHeight: 1.5,
   },
+  normal1:{
+    font: 'Arial',
+    fontSize: 10,
+    alignment: 'left',    
+  },
   espacio: {
     margin: [0, 0, 0, 5],
   },
