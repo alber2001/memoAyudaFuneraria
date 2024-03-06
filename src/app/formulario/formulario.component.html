@@ -1,0 +1,43 @@
+<p>formulario works!</p>
+<div class="row">
+  <div class="col-4">
+    <form [formGroup]="formulario" (ngSubmit)="enviarDatos()">
+      <div class="form-group">
+        <label for="nombre">Nombre: </label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="nombre"
+          id="nombre"
+        />
+        <div
+          *ngIf="formulario.get('nombre').invalid && formulario.get('nombre').touched"
+        >
+          Nombre es requerido.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="identidad">Identidad:</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="identidad"
+          id="identidad"
+        />
+        <div
+          *ngIf="formulario.get('identidad').invalid && formulario.get('identidad').touched"
+        >
+          Nombre es requerido.
+        </div>
+      </div>
+      <br />
+      <button
+        type="submit"
+        class="btn btn-info"
+        [disabled]="formulario.invalid"
+      >
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>

@@ -5,20 +5,24 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ResolucionComponent } from './resolucion/resolucion.component';
 import { PagoCajaComponent } from './pago-caja/pago-caja.component';
-
+import { FormularioComponent } from './formulario/formulario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResolucionComponent,
-    PagoCajaComponent
+    PagoCajaComponent,
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

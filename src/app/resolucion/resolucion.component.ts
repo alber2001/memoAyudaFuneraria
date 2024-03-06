@@ -22,7 +22,15 @@ export class ResolucionComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  generarResolucion() {
+  datosRecibidos: any;
+
+  recibirDatos(datos: any) {
+    //this.datosRecibidos = datos;
+    console.log(datos);
+    this.generarResolucion(datos);
+  }
+
+  generarResolucion(datos: any) {
     const documentDefinition = {
       pageMargins: [55.05, 32, 55.05, 32],
       pageSize: 'letter', // Establecer el tamaño de la página como "carta" letter
@@ -33,14 +41,14 @@ export class ResolucionComponent implements OnInit {
           height: 792,
         },
       ],
-      content: this.generateContent(),
+      content: this.generateContent(datos.nombre, datos.identidad),
       styles,
       defaultStyle,
     };
     pdfMake.createPdf(documentDefinition).open();
   }
 
-  generateContent(): any[] {
+  generateContent(nombre: string, identidad: string): any[] {
     const content = [];
     content.push(
       {
@@ -62,10 +70,10 @@ export class ResolucionComponent implements OnInit {
           body: [
             [
               {
-                text: 'YESENIA ORQUIDEA MORENO HERNANDEZ',
+                text: `${nombre}`,
                 style: 'normalBoldCenter',
               },
-              { text: '0301-1950-0000184874546', style: 'normalBoldCenter' },
+              { text: `${identidad}`, style: 'normalBoldCenter' },
             ],
             [
               { text: 'Nombre del fallecido', style: 'normalCenter' },
