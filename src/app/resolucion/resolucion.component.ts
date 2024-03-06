@@ -328,10 +328,12 @@ export class ResolucionComponent implements OnInit {
           ],
         },
       },
+      { text: '', style: 'espacio' },
+      { text: '', style: 'espacio' },
+      { text: '', style: 'espacio' },
       {
-        text: 'LUGAR, DIA, MES Y AÑO',
-        style: 'normal',
-        margin: [5, 13, 0, 5],
+        text: 'TEGUCIGALPA 14 DE MAYO DEL 2024',
+        style: 'NormalLeftBold',
       },
       {
         canvas: [
@@ -339,14 +341,12 @@ export class ResolucionComponent implements OnInit {
             type: 'line',
             x1: 0,
             y1: 0,
-            x2: 192.5,
+            x2: 242.5,
             y2: 0,
             lineWidth: 1,
             lineColor: 'black',
           },
         ],
-        margin: [0, -4, 0, 0],
-        alignment: 'left',
       },
       {
         canvas: [
@@ -354,21 +354,20 @@ export class ResolucionComponent implements OnInit {
             type: 'line',
             x1: 0,
             y1: 0,
-            x2: 192.5,
+            x2: 242.5,
             y2: 0,
             lineWidth: 1,
             lineColor: 'black',
           },
         ],
-        margin: [-40, -4, 0, 0],
         alignment: 'right',
       },
       {
         text: 'Firma del solicitante',
+        margin: [340, 0, 0, 0],
         style: 'normal',
-        margin: [360, -19.6, 20, 20],
-        //alignment: 'right',
       },
+      { text: '', style: 'espacio' },
       {
         table: {
           headerRows: 1,
@@ -388,6 +387,188 @@ export class ResolucionComponent implements OnInit {
           ],
         },
         margin: [0, 0, 0, 0],
+      },
+      { text: '', style: 'espacio' },
+      { text: 'Documentos anexos: ', style: 'normal' },
+      {
+        canvas: [
+          {
+            type: 'line',
+            x1: 0,
+            y1: 0,
+            x2: 404.9,
+            y2: 0,
+            lineWidth: 1,
+            lineColor: 'black',
+          },
+        ],
+        //margin: [300, 0, 0, -5],
+        absolutePosition: {
+          x: 152,
+          y: 519.5,
+        },
+      },
+      { text: '', style: 'espacio' },
+      { text: '', style: 'espacio' },
+      { text: '', style: 'espacio' },
+      {
+        canvas: [
+          {
+            type: 'line',
+            x1: 0,
+            y1: 0,
+            x2: 502.5,
+            y2: 0,
+            lineWidth: 1,
+            lineColor: 'black',
+          },
+        ],
+      },
+      { text: '', style: 'espacio' },
+      { text: '', style: 'espacio' },
+      { text: '', style: 'espacio' },
+      {
+        canvas: [
+          {
+            type: 'line',
+            x1: 0,
+            y1: 0,
+            x2: 502.5,
+            y2: 0,
+            lineWidth: 1,
+            lineColor: 'black',
+          },
+        ],
+      },
+      { text: '', style: 'espacio' },
+      { text: '', style: 'espacio' },
+      { text: '', style: 'espacio' },
+      {
+        table: {
+          headerRows: 1,
+          widths: ['*'],
+          body: [
+            [
+              {
+                text: 'RESOLUCIÓN',
+                style: 'normalBoldCenter',
+              },
+            ],
+          ],
+        },
+      },
+      {
+        table: {
+          headerRows: 1,
+          widths: ['*'],
+          body: [
+            [
+              {
+                stack: [
+                  { text: '', style: 'espacio' },
+                  {
+                    text: 'Paguese la cantidad de: L.',
+                    style: 'NormalLeftJustify',
+                  },
+                  {
+                    canvas: [
+                      {
+                        type: 'line',
+                        x1: 0,
+                        y1: 5,
+                        x2: 372,
+                        y2: 5,
+                        lineWidth: 1,
+                        lineColor: 'black',
+                      },
+                    ],
+                    margin: [119, -8.5, 0, 0],
+                  },
+                  { text: '', style: 'espacio' },
+                  {
+                    text: 'o hasta la concurrencia de ',
+                    style: 'NormalLeftJustify',
+                  },
+                  {
+                    canvas: [
+                      {
+                        type: 'line',
+                        x1: 0,
+                        y1: 5,
+                        x2: 372,
+                        y2: 5,
+                        lineWidth: 1,
+                        lineColor: 'black',
+                      },
+                    ],
+                    margin: [119, -7.5, 0, 0],
+                  },
+                  { text: '', style: 'espacio' },
+                  {
+                    text: 'si se hubiere hecho algún pago anteriormente en relación con el mismo sepelio. ',
+                    style: 'NormalLeftJustify',
+                  },
+                  {
+                    text: [
+                      { text: 'FECHA: ', style: 'NormalLeftBold' },
+                      {
+                        text: '14 de Marzo del 2024 ',
+                        style: 'NormalLeftBold',
+                      },
+                    ],
+                  },
+                  { text: '', style: 'espacio' },
+                  { text: '', style: 'espacio' },
+                  { text: '', style: 'espacio' },
+                  { text: '', style: 'espacio' },
+                  {
+                    canvas: [
+                      {
+                        type: 'line',
+                        x1: 0,
+                        y1: 0,
+                        x2: 242.5,
+                        y2: 0,
+                        lineWidth: 1,
+                        lineColor: 'black',
+                      },
+                    ],
+                  },
+                  {
+                    canvas: [
+                      {
+                        type: 'line',
+                        x1: 0,
+                        y1: 0,
+                        x2: 242.5,
+                        y2: 0,
+                        lineWidth: 1,
+                        lineColor: 'black',
+                      },
+                    ],
+                    alignment: 'right',
+                  },
+                  {
+                    text: 'NOMBRE DE LA PERSONA QUE RECIBE',
+                    style: 'normalBold',
+                    margin: [15, -10.5, 0, 0],
+                  },
+                  {
+                    text: 'Nombre de quien recibe la solicitud',
+                    style: 'normal',
+                    margin: [27, 2, 0, 0],
+                  },
+                  {
+                    text: 'Firma de quien recibe solicitud',
+                    style: 'normal',
+                    margin: [300, -11, 0, 0],
+                  },
+                ],
+                border: [true, false, true, true],
+              },
+            ],
+          ],
+        },
       }
     );
     return content;
